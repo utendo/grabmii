@@ -102,7 +102,7 @@ app.get('/whash', (req, res) => {
                         let jObj2 = parser.parse(xml);
                         res.send(jObj2.miis.mii.data);
                         } catch (e) {
-                            res.send("Not Found");
+                            res.status(404).send("Not Found");
                         }
                 })
                 .catch(err => console.error(err));
@@ -138,7 +138,7 @@ app.get('/mhash', (req, res) => {
                     let result = urlPart.split("_")[0];
                     res.send(result);
                     } catch (e) {
-                        res.send("Not Found");
+                        res.status(404).send("Not Found");
                     }
                 })
                 .catch(err => console.error(err));
