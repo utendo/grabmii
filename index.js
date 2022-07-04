@@ -44,6 +44,40 @@ app.get('/all', (req, res) => {
         .catch(err => console.error(err));
 })
 
+app.get('/expression', (req, res) => {
+    let nnid = req.query.id;
+    let expression = req.query.type
+
+    fetch(api + nnid, {
+        headers: {
+        'X-Nintendo-Client-ID': nc_id,
+        'X-Nintendo-Client-Secret': nc_secret
+        }})
+        .then(response => response.text())
+        .then(data => {
+            let jObj = parser.parse(data);
+            let out_id = jObj.mapped_ids.mapped_id.out_id;
+            fetch(mii_api+out_id, {
+                headers: {
+                'X-Nintendo-Client-ID': nc_id,
+                'X-Nintendo-Client-Secret': nc_secret
+                }
+            })
+                .then(response => response.text())
+                .then(xml => {
+                    let jObj2 = parser.parse(xml);
+
+                    let faces = jObj2.miis.mii.images.image;
+                    let face_type = faces.find(face => face.type === expression);
+
+                    res.status(301).redirect(face_type.url)
+                    res.send(face_type.url);
+                })
+                .catch(err => console.error(err));
+        })
+        .catch(err => console.error(err));
+})
+
 app.get('/whash', (req, res) => {
     let nnid = req.query.id;
 
