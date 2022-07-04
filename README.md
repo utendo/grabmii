@@ -1,4 +1,5 @@
 ![GrabMii](https://i.ibb.co/10XydrB/image.png)
+
 A Node.js web API made to get Mii informations only using a Nintendo Network ID (NNID)
 
 ## Installation
