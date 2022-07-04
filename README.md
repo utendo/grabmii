@@ -1,5 +1,5 @@
-# nnidinfograbber
-A tool used to get info from a NNID (Nintendo Network ID) like Display Name, Mii Hash (for WaraWara and also for mii-secure.cdn.nintendo.net)
+# GrabMii!
+A Node.js web API made to get Mii informations only using a Nintendo Network ID (NNID)
 
 ## Usage
 **First, run `npm install` in your terminal to install all required packages**
