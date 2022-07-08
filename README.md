@@ -24,7 +24,7 @@ Once it is running, you're good to go!
 | example |expression-type| format |
 |--|--|--|
 | ![](http://mii-images.account.nintendo.net/3f89y68p7z0hq_whole_body.png) | whole_body | png |
-| ![](https://mii-secure.account.nintendo.net/3f89y68p7z0hq_standard.tga) | standard | tga |
+| ![image](https://user-images.githubusercontent.com/32978709/178002733-81751d4c-6cd5-4fd9-962a-73ec334ef781.png) | standard | tga |
 | ![](http://mii-images.account.nintendo.net/3f89y68p7z0hq_frustrated_face.png) | frustrated_face | png |
 | ![](http://mii-images.account.nintendo.net/3f89y68p7z0hq_happy_face.png) | happy_face | png |
 | ![](http://mii-images.account.nintendo.net/3f89y68p7z0hq_like_face.png) | like_face | png |
